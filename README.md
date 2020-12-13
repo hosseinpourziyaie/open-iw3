@@ -1,20 +1,27 @@
-# open-iw3
-OPEN-IW3 | COD4 MP[1.7.568] Modification
+# OPEN-IW3 | COD4 MP[1.7.568] Modification
+
+simple call of duty : modern warfare 1 client 
+
 
 # Features
 
-- CD Key Requirement Removal
+- CD Key Requirement Removal alongside punkbuster
 
 - changed Serverlist query packets to work with dpmaster(open quake III protocol master server)
 
 ![code](https://raw.githubusercontent.com/hosseinpourziyaie/open-iw3/main/assets/showoff_serverlist.jpg)
 
-- extended Max cg_fov to 120
+- extended cg_fov max to 120
 
 ![code](https://raw.githubusercontent.com/hosseinpourziyaie/open-iw3/main/assets/showoff_fov.jpg)
 
 
 - some other visual improvements
+
+# Known Issue
+
+- infoResponse string does not have pair for clients count; fixed by ignoring from dpmaster data check for now
+
 
 
 ## Credits
@@ -25,4 +32,5 @@ OPEN-IW3 | COD4 MP[1.7.568] Modification
 | UTILS + OSW | COD-MOD(Momo5502)                        |
 | CD Key Patch | CoD4-MP LTN(vorhon)                      |
 | DP-MASTER | Mathieu Olivier                       |
-| HELP IN RE | Laupetin                       |
+
+Also Thanks to Laupetin Helped me with some Reverse Engineering notes
