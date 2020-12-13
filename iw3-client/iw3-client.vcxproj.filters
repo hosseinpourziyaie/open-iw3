@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Hooking.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamFriends005.cpp">
+      <Filter>Steam</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamBase.cpp">
+      <Filter>Steam</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamUserStats010.cpp">
+      <Filter>Steam</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamMatchmaking007.cpp">
+      <Filter>Steam</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamUser012.cpp">
+      <Filter>Steam</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLLP.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="definitions.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Experimental_Patches.cpp">
+      <Filter>Patches</Filter>
+    </ClCompile>
+    <ClCompile Include="Patch_IW3_568.cpp">
+      <Filter>Patches</Filter>
+    </ClCompile>
+    <ClCompile Include="HeadQuarters.cpp">
+      <Filter>Patches</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Hooking.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamFriends005.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamTypes.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="CCallback.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ISteamClient008.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ISteamFriends005.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="EAccountType.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="EChatMemberStateChange.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ELobbyType.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ENotificationPosition.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="EPersonalQuestion.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="EResult.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="EUniverse.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="EServerMode.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ESteamError.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ESteamNotify.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameID.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchMakingKeyValuePair.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="servernetadr.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="gameserveritem.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="FriendGameInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientCommon.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="FriendsCommon.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorShift.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rgb_hsv.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="afxres.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamUserStats010.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ISteamUserStats010.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamApp.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamAppDependencyInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamAppLaunchOption.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamAppStats.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamAppVersion.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamDiscountQualifier.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamElemInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamError.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamExternalBillingInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamGlobalUserID.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamOfflineStatus.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamPaymentCardInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamPaymentCardReceiptInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamPrepurchaseInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamPrepurchaseReceiptInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamProgress.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamSplitLocalUserID.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamSubscription.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamSubscriptionBillingInfo.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamSubscriptionDiscount.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamSubscriptionReceipt.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamSubscriptionStats.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TSteamUpdateStats.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamMatchmaking007.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ISteamMatchmaking007.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchmakingCommon.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="UserCommon.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="ISteamUser012.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamUser012.h">
+      <Filter>SteamHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="definitions.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="addresses.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Steam">
+      <UniqueIdentifier>{c54421ad-30b8-40ff-a6e5-c1a6f40acb32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SteamHeader">
+      <UniqueIdentifier>{23b5ea8f-c768-4ada-9a2d-44fd680be0fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Patches">
+      <UniqueIdentifier>{758e1037-01ef-41cb-94a3-21348c1ca5be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{ce93bee6-a485-4549-8d94-077be69a4f87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{d1078ba3-01dc-4f53-8a13-d97e45fe69d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

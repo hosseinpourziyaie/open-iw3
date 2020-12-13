@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{17F0C96D-58ED-4039-8352-6CDBDC915B71}</ProjectGuid>
+    <RootNamespace>clientdll</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>iw3-client</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <TargetName>d3d9</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <TargetName>d3d9</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>pushd "$(SolutionDir)\dependencies\tools"
+call "$(SolutionDir)\dependencies\tools\buildnumber.exe"
+popd</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CLIENTDLL_EXPORTS;_WINDLL</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalUsingDirectories>$(SolutionDir)\dependencies\lib\;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wldap32.lib;ws2_32.lib;winmm.lib;shlwapi.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "F:\Program Files (x86)\Call of Duty 4 - Modern Warfare\d3d9.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>pushd "$(SolutionDir)\dependencies\tools"
+call "$(SolutionDir)\dependencies\tools\buildnumber.exe"
+popd</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CLIENTDLL_EXPORTS;_WINDLL</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalUsingDirectories>$(SolutionDir)\dependencies\lib\;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wldap32.lib;ws2_32.lib;winmm.lib;shlwapi.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "F:\Program Files (x86)\Call of Duty 4 - Modern Warfare\d3d9.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="definitions.cpp" />
+    <ClCompile Include="Experimental_Patches.cpp" />
+    <ClCompile Include="HeadQuarters.cpp" />
+    <ClCompile Include="Patch_IW3_568.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SDLLP.cpp" />
+    <ClCompile Include="SteamBase.cpp" />
+    <ClCompile Include="SteamFriends005.cpp" />
+    <ClCompile Include="SteamMatchmaking007.cpp" />
+    <ClCompile Include="SteamUserStats010.cpp" />
+    <ClCompile Include="SteamUser012.cpp" />
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="addresses.h" />
+    <ClInclude Include="afxres.h" />
+    <ClInclude Include="CCallback.h" />
+    <ClInclude Include="CGameID.h" />
+    <ClInclude Include="ClientCommon.h" />
+    <ClInclude Include="ColorShift.h" />
+    <ClInclude Include="definitions.h" />
+    <ClInclude Include="EAccountType.h" />
+    <ClInclude Include="EChatMemberStateChange.h" />
+    <ClInclude Include="ELobbyType.h" />
+    <ClInclude Include="ENotificationPosition.h" />
+    <ClInclude Include="EPersonalQuestion.h" />
+    <ClInclude Include="EResult.h" />
+    <ClInclude Include="EServerMode.h" />
+    <ClInclude Include="ESteamError.h" />
+    <ClInclude Include="ESteamNotify.h" />
+    <ClInclude Include="EUniverse.h" />
+    <ClInclude Include="FriendGameInfo.h" />
+    <ClInclude Include="FriendsCommon.h" />
+    <ClInclude Include="gameserveritem.h" />
+    <ClInclude Include="Hooking.h" />
+    <ClInclude Include="ISteamClient008.h" />
+    <ClInclude Include="ISteamFriends005.h" />
+    <ClInclude Include="ISteamMatchmaking007.h" />
+    <ClInclude Include="ISteamUser012.h" />
+    <ClInclude Include="ISteamUserStats010.h" />
+    <ClInclude Include="MatchmakingCommon.h" />
+    <ClInclude Include="MatchMakingKeyValuePair.h" />
+    <ClInclude Include="rgb_hsv.h" />
+    <ClInclude Include="servernetadr.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SteamFriends005.h" />
+    <ClInclude Include="SteamMatchmaking007.h" />
+    <ClInclude Include="SteamTypes.h" />
+    <ClInclude Include="SteamUser012.h" />
+    <ClInclude Include="SteamUserStats010.h" />
+    <ClInclude Include="TSteamApp.h" />
+    <ClInclude Include="TSteamAppDependencyInfo.h" />
+    <ClInclude Include="TSteamAppLaunchOption.h" />
+    <ClInclude Include="TSteamAppStats.h" />
+    <ClInclude Include="TSteamAppVersion.h" />
+    <ClInclude Include="TSteamDiscountQualifier.h" />
+    <ClInclude Include="TSteamElemInfo.h" />
+    <ClInclude Include="TSteamError.h" />
+    <ClInclude Include="TSteamExternalBillingInfo.h" />
+    <ClInclude Include="TSteamGlobalUserID.h" />
+    <ClInclude Include="TSteamOfflineStatus.h" />
+    <ClInclude Include="TSteamPaymentCardInfo.h" />
+    <ClInclude Include="TSteamPaymentCardReceiptInfo.h" />
+    <ClInclude Include="TSteamPrepurchaseInfo.h" />
+    <ClInclude Include="TSteamPrepurchaseReceiptInfo.h" />
+    <ClInclude Include="TSteamProgress.h" />
+    <ClInclude Include="TSteamSplitLocalUserID.h" />
+    <ClInclude Include="TSteamSubscription.h" />
+    <ClInclude Include="TSteamSubscriptionBillingInfo.h" />
+    <ClInclude Include="TSteamSubscriptionDiscount.h" />
+    <ClInclude Include="TSteamSubscriptionReceipt.h" />
+    <ClInclude Include="TSteamSubscriptionStats.h" />
+    <ClInclude Include="TSteamUpdateStats.h" />
+    <ClInclude Include="UserCommon.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
