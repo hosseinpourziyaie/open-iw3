@@ -22,7 +22,13 @@ simple call of duty : modern warfare 1 client
 
 - infoResponse string does not have pair for clients count; fixed by ignoring from dpmaster data check for now
 
+# Notes
 
+- OSW for cod4 is something quite un-necessary. reason i included it was this project meant to be multi-functional. I mean it would have worked for various cods beside cod4
+
+# TODO
+
+- Add LocalizedStrings Patch maybe?
 
 ## Credits
 
