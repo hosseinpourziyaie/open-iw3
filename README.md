@@ -24,7 +24,7 @@ simple call of duty : modern warfare 1 client
 
 # Notes
 
-- OSW for cod4 is something quite un-necessary. reason i included it was this project meant to be multi-functional. I mean it would have worked for various cods beside cod4
+- OSW for cod4 is something quite un-necessary. this project meant to be multi-functional at first. I mean it would have worked for various cods beside cod4
 
 # TODO
 
