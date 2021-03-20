@@ -9,7 +9,7 @@
 // Started: 2010-09-10
 // ==========================================================
 
-#include "StdInc.h"
+#include "stdafx.h"
 #include <ShellAPI.h>
 
 using namespace std;
@@ -48,24 +48,6 @@ const char *va( const char *fmt, ... )
 	vsprintf( dest, fmt, ap );
 	va_end(ap);
 	return dest;
-}
-
-extern int printError;
-extern errorParm_s printErrorType;
-extern char* printErrorMessage;
-
-void Com_Error_Thread(errorParm_s type, const char* message, ...)
-{	
-	va_list ap;
-	char *dest = &g_vaBuffer[g_vaNextBufferIndex][0];
-	g_vaNextBufferIndex = (g_vaNextBufferIndex + 1) % VA_BUFFER_COUNT;
-	va_start(ap, message);
-	vsprintf( dest, message, ap );
-	va_end(ap);
-
-	printErrorType = type;
-	printErrorMessage = dest;
-	printError = true;
 }
 
 unsigned int _gameFlags;
